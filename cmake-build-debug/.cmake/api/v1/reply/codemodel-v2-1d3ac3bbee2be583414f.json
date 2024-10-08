@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/mirko/Projets Git/prg1-e-04-nbre-premiers-Backtery/cmake-build-debug",
-		"source" : "C:/Users/mirko/Projets Git/prg1-e-04-nbre-premiers-Backtery"
+		"build" : "C:/Users/mirko/Dev/prg1-e-04-nbre-premiers-Backtery/cmake-build-debug",
+		"source" : "C:/Users/mirko/Dev/prg1-e-04-nbre-premiers-Backtery"
 	},
 	"version" : 
 	{

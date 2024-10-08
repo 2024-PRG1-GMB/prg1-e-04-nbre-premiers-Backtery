@@ -6,32 +6,48 @@ using namespace std;
 int main() {
 
     int limite;
+    string recommencer;
 
-    //saisie de l'utilisateur
     do {
-        cout << "entrer une valeur [2-1000] : ";
-        cin >> limite;
+        //saisie de l'utilisateur
+        do {
+            cout << "entrer une valeur [2-1000] : ";
+            cin >> limite;
 
-    } while (limite < 2 || limite > 1000);
+        } while (limite < 2 || limite > 1000);
 
-    // calcul des nombres premiers et affichage en tableau
-    cout << "Voici la liste des nombres premiers : " << endl;
+        cout << "Voici la liste des nombres premiers : " << endl;
 
-    int count = 0;
-    int check = 0;
-    for (int i = 1; i <= limite; i++) {
-        if (count == 5) {
+        int count = 0;
+
+        // calcul des nombres premiers
+        for (int n = 2; n <= limite; n++) {
+            bool premier = true;
+            if (count == 5) {
                 cout << endl;
                 count = 0;
-        }
-            if (limite % check == 0) {
-                    cout << i << "    ";
-                    count++;
-            } else {
-                check++;
             }
-    }
 
+            for (int j = 2; j < n; j++) {
+                if (n % j == 0) {
+                    premier = false;
+                    break; //évite de calculer le reste
+                }
+            }
+
+            // affichage en tableau
+            if (premier) {
+                cout << n << "\t";
+                count++;
+            }
+        }
+        do {
+            cout << "Voulez-vous recommencer [O/N] ? : ";
+            cin >> recommencer;
+
+        //vérifie que cela ne soit que O ou N.
+        } while (recommencer != "O" && recommencer != "N");
+    } while (recommencer == "O");
 
     return EXIT_SUCCESS;
 }
