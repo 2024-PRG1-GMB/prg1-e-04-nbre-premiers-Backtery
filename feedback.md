@@ -1,0 +1,4 @@
+- Pas d'en-tête dans votre fichier (nom, prénom, date et explicatif)
+- Pas de constantes pour les limites et les entrées utilisateur
+- Faute d'orthographe ligne 14
+- Non respect de l'affichage demandé par la donnée
